@@ -1,0 +1,53 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "curtishughes017@gmail.com",
+    "longName": "Curt's WatchFace",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "fonts/Cabin-Bold.ttf",
+                "name": "CABIN_BOLD_15",
+                "targetPlatforms": null,
+                "type": "font"
+            },
+            {
+                "file": "fonts/Cabin_Small.ttf",
+                "name": "CABIN_SMALL_15",
+                "targetPlatforms": null,
+                "type": "font"
+            },
+            {
+                "file": "fonts/Cabin.ttf",
+                "name": "CABIN_40",
+                "targetPlatforms": null,
+                "type": "font"
+            },
+            {
+                "file": "images/background.png",
+                "name": "BACKGROUND_IMAGE",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "fonts/SigmarOne.ttf",
+                "name": "SIGMAR_ONE_40",
+                "targetPlatforms": null,
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Curt's WatchFace",
+    "targetPlatforms": [
+        "chalk"
+    ],
+    "uuid": "6af37ba4-980b-496d-9e63-f083cf465689",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
