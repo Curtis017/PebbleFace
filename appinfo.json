@@ -4,6 +4,7 @@
         ""
     ],
     "companyName": "curtishughes017@gmail.com",
+    "enableMultiJS": false,
     "longName": "Curt's WatchFace",
     "projectType": "native",
     "resources": {
@@ -48,6 +49,6 @@
     "uuid": "6af37ba4-980b-496d-9e63-f083cf465689",
     "versionLabel": "1.0",
     "watchapp": {
-        "watchface": false
+        "watchface": true
     }
 }

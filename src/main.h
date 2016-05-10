@@ -29,27 +29,16 @@ static void update_time() {
   static char s_buffer2[8];
   strftime(s_buffer2, sizeof(s_buffer2), "%p", tick_time);
   
-  // Display this time on the TextLayer
+  // Update the current Date
+  static char s_buffer3[16];
+  strftime(s_buffer3, sizeof(s_buffer3), "%a, %b %d", tick_time);
+//   strftime(s_buffer3, sizeof(s_buffer3), "%a %d %b", tick_time);
+//   strftime(s_buffer3, sizeof(s_buffer3), "%m/%d/%y", tick_time);
+  
+  // Display this time/date on the TextLayer
   text_layer_set_text(s_time_layer, s_buffer);
   text_layer_set_text(s_am_pm_layer, s_buffer2);
-}
-
-static void update_date(){
-  // Update the current Date
-  static char s_buffer[16];
-  strftime(s_buffer, sizeof(s_buffer), "%a %d %b", tick_time);
-  
-  // Display this date on the TextLayer
-  text_layer_set_text(s_date_layer, s_buffer); 
-}
-
-static void update_am_pm(){
-  // Write the current AM/PM 
-  static char s_buffer[8];
-  strftime(s_buffer, sizeof(s_buffer), "%p", tick_time);
-  
-  // Display this date on the TextLayer
-  text_layer_set_text(s_am_pm_layer, s_buffer); 
+  text_layer_set_text(s_date_layer, s_buffer3);
 }
 
 static void battery_callback(BatteryChargeState state) {
@@ -177,8 +166,6 @@ static void init() {
 
   // Make sure the time is displayed from the start
   update_time();
-  update_date();
-  update_am_pm();
 
   // Register with TickTimerService
   tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
